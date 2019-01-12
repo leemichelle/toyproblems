@@ -22,3 +22,19 @@ let twoSum = (nums, target) => {
      }
   }
 };
+
+//Better solution
+var twoSum = function(nums, target) {
+    var counter = {}
+    for(let i = 0; i < nums.length; i++) {
+      let value = nums[i]; //3, 2, 4
+      let difference = target - value; //3, 4, 2
+      if (counter.hasOwnProperty(value)) {
+        return [counter[value], i]
+      } else {
+        counter[difference] = i
+      }
+    }
+    return []
+  }
+  twoSum([3, 2, 4], 6); //[1, 2]
