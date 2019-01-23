@@ -9,3 +9,64 @@ let reverseString = (s) => {
   }
   return result;
 };
+
+function reverse(str) {
+  let str = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    str += str[i];
+  }
+  return str;
+}
+
+function reverse(str) {
+  let reversed = '';
+  for (let character of str) {
+    reversed = character + reversed;
+  }
+  return reversed;
+}
+
+function reverse(str) {
+  return str.split('').reduce((reversed, character) => 
+    character + reversed
+  , '')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
