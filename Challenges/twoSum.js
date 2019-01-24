@@ -38,3 +38,16 @@ var twoSum = function(nums, target) {
     return []
   }
   twoSum([3, 2, 4], 6); //[1, 2]
+
+  //Another way to write solution above
+  var twoSum = function(nums, target) {
+    var ans = [];
+    var exist = {};
+    
+    for (var i = 0; i < nums.length; i++){
+        if (typeof(exist[target-nums[i]]) !== 'undefined'){ // because when you find a pair that exits in object, that's the one that is the answer...due to some weird algorithm
+            return [exist[target - nums[i]], i];
+        }
+        exist[nums[i]] = i;
+    }
+  }
